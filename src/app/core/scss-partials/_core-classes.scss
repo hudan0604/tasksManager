@@ -1,0 +1,19 @@
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: 100% / 12 * $i;
+    }
+}
+
+.centerEverything {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+// ng-scrollbar {    
+//     border: 1px solid gray;
+//   }
+

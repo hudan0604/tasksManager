@@ -1,0 +1,6 @@
+<!-- At least one task -->
+<tm-task-list *ngIf="tasks && tasks.length > 0; else empty"></tm-task-list>
+<!-- No tasks created or all tasks deleted -->
+<ng-template #empty>
+    <tm-no-tasks></tm-no-tasks>    
+</ng-template>

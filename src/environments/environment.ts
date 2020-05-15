@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyDYtqX9Z-GFxLroEhQULjbSWV54nYzl6uc',
+    authDomain: 'tasksmanager-88766.firebaseapp.com',
+    databaseURL: 'https://tasksmanager-88766.firebaseio.com',
+    projectId: 'tasksmanager-88766',
+    storageBucket: 'tasksmanager-88766.appspot.com',
+    messagingSenderId: '1016758096995',
+    appId: '1:1016758096995:web:59fe5df49dccd8a367d456',
+  }
 };
 
 /*

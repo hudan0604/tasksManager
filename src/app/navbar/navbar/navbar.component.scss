@@ -1,0 +1,36 @@
+@import '../../core/scss-partials/variables'; 
+
+#navbar {
+  overflow: hidden;
+  background-color: $green-main-color;
+  padding: 15px 10px; 
+  transition: 0.4s; 
+  position: fixed; 
+  width: 100%;
+  top: 0; 
+  left: 0;
+  z-index: 99;
+
+  #logo {
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.4s;
+  }
+  a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+}
+
+.scrolledNav {
+  padding: 5px 10px !important;
+}
+.scrolledLogo {
+  font-size: 25px !important;
+}

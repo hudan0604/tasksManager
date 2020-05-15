@@ -1,0 +1,16 @@
+<ng-container *ngIf="display$ | async as display">
+    <section [class.open]="display === 'open'"
+             (click)="close()">
+      <div (click)="$event.stopPropagation()">
+        <span>
+            <label style="margin: auto;">{{modalConfig.title}}</label>
+            <button class="close"
+                type="button" 
+                (click)="close()">X</button>
+        </span>  
+        
+        <!-- component that we want to show -->
+        <div [innerHtml]="modalConfig.content | sanitizeHtml"></div>
+      </div>
+    </section>
+  </ng-container>
