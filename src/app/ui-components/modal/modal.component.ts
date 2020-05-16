@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 import { ModalService } from 'src/app/core/services/modal/modal.service';
 import { Observable } from 'rxjs';
-import { ModalConfig } from 'src/app/core/models/models';
 
 @Component({
   selector: 'tm-modal',

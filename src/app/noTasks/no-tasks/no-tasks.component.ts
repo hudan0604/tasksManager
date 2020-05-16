@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalService } from 'src/app/core/services/modal/modal.service';
-import { ModalConfig } from 'src/app/core/models/models';
 
 @Component({
   selector: 'tm-no-tasks',

@@ -17,7 +17,8 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { ButtonComponent } from './ui-components/button/button.component';
 import { CreateTaskComponent } from './tasksCRUD/create-task/create-task.component';
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
-import { ModalComponent } from './modal/modal/modal.component';
+import { ModalComponent } from './ui-components/modal/modal.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -41,7 +42,9 @@ import { ModalComponent } from './modal/modal/modal.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     PerfectScrollbarModule,
-    DynamicDialogModule
+    DynamicDialogModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
