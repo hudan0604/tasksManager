@@ -3,14 +3,17 @@
              (click)="close()">
       <div (click)="$event.stopPropagation()">
         <span>
-            <label style="margin: auto;">{{modalConfig.title}}</label>
+            <label style="margin: auto;">{{title}}</label>
             <button class="close"
                 type="button" 
                 (click)="close()">X</button>
         </span>  
         
         <!-- component that we want to show -->
-        <div [innerHtml]="modalConfig.content | sanitizeHtml"></div>
+        <div style="padding: 4px 10px;">
+          <ng-content ></ng-content>
+        </div>
+        
       </div>
     </section>
   </ng-container>

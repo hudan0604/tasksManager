@@ -18,7 +18,6 @@ import { ButtonComponent } from './ui-components/button/button.component';
 import { CreateTaskComponent } from './tasksCRUD/create-task/create-task.component';
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import { ModalComponent } from './modal/modal/modal.component';
-import { SanitizeHtmlPipe } from './core/pipes/sanitizeHtml/sanitize-html.pipe';
 
 
 @NgModule({
@@ -31,8 +30,7 @@ import { SanitizeHtmlPipe } from './core/pipes/sanitizeHtml/sanitize-html.pipe';
     TaskListComponent,
     ButtonComponent,
     CreateTaskComponent,
-    ModalComponent,
-    SanitizeHtmlPipe
+    ModalComponent
   ],
   entryComponents: [
   ],

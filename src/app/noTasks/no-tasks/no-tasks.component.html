@@ -1,4 +1,4 @@
-<div style="height: 100%;">    
+    
 <div class="centerEverything">
     <h1>You have no tasks yet</h1>
     <p>Click on the button <br>
@@ -6,6 +6,9 @@
          first task
     </p>
     <tm-button [label]="buttonLabel" (click)='showCreateTaskModal()'></tm-button>
-    <tm-modal [modalConfig]='modalConfig'></tm-modal>
+    <!-- Custom modal / No libraries used -->
+    <tm-modal [title]='modalTitle'>                
+        <tm-create-task></tm-create-task>
+    </tm-modal>
 </div>
-</div>
+

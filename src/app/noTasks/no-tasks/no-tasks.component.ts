@@ -9,17 +9,13 @@ import { ModalConfig } from 'src/app/core/models/models';
 })
 export class NoTasksComponent implements OnInit {
   buttonLabel = 'Add a task';
-  modalConfig: ModalConfig = {
-    title: 'Add a task',
-    content: `<tm-create-task></tm-create-task>`
-  };
+  modalTitle = this.buttonLabel;
 
   constructor(
     public modalService: ModalService,
   ) { }
 
   showCreateTaskModal() {
-    console.log('are we in method to open modal?');
     this.modalService.open();
   }
 
