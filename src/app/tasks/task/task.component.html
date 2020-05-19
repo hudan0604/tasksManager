@@ -1,1 +1,7 @@
-<p>task works!</p>
+<div class="task">
+    <label>{{task.name}}</label>
+    <div>{{task.description}}</div>
+</div>
+<div (click)="deleteTask(task.id)">
+    X
+</div>

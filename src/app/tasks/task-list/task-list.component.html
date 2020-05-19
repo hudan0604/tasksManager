@@ -1,1 +1,12 @@
-<p>task-list works!</p>
+<div style="display: flex;">
+    <!-- List of tasks -->
+    <div class="col-10">
+        <!-- Each task -->
+        <tm-task [task]="task" *ngFor="let task of tasks">            
+        </tm-task >        
+    </div>
+    <div class="col-2" routerLink="/createTask">
+        bouton ajout        
+    </div>
+
+</div>

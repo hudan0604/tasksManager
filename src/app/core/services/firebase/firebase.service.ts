@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore/';
 import { TaskModel } from '../../models/models';
 
@@ -20,4 +19,7 @@ export class FirebaseService {
 // updateTask(task: TaskModel) {
 //   return this.db.doc('tasks/' + task.id).update(policy);
 // }
+deleteTask(taskId) {
+  return this.db.collection('tasks').doc(taskId).delete();
+}
 }

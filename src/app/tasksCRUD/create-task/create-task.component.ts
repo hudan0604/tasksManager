@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 import { TaskModel } from 'src/app/core/models/models';
 import { FirebaseService } from 'src/app/core/services/firebase/firebase.service';
 import { DocumentReference } from '@angular/fire/firestore/interfaces';
-import { ModalService } from 'src/app/core/services/modal/modal.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'tm-create-task',
@@ -22,7 +22,8 @@ export class CreateTaskComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private taskService: FirebaseService,
-    private modalService: ModalService
+    private router: Router,
+    private route: ActivatedRoute,
     ) { }
 
   initForm() {
@@ -52,7 +53,7 @@ export class CreateTaskComponent implements OnInit {
     return this.taskService.addTask(task).then(
       success => {
         console.log('so? : ', success);
-        this.modalService.close();
+        this.router.navigate(['../'], {relativeTo: this.route});
       },
       error => console.log('error: ', error));
   }

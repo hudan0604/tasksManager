@@ -5,7 +5,7 @@
          to create your<br>
          first task
     </p>
-    <tm-button [label]="buttonLabel" (click)='showCreateTaskModal()'></tm-button>
+    <tm-button [label]="buttonLabel" routerLink="/createTask"></tm-button>
     <!-- Custom modal / No libraries used -->
     <tm-modal [title]='modalTitle'>                
         <tm-create-task></tm-create-task>
