@@ -7,6 +7,7 @@ import { ModalService } from 'src/app/core/services/modal/modal.service';
   styleUrls: ['./no-tasks.component.scss']
 })
 export class NoTasksComponent implements OnInit {
+  buttonLabel = 'Add a task';
 
   constructor(
   ) { }
