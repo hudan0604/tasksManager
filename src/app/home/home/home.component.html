@@ -1,7 +1,11 @@
-<!-- add animated spinner during tasks loading  -->
 <!-- At least one task -->
-<tm-task-list *ngIf="tasks && tasks.length > 0; else empty" [tasks]="tasks"></tm-task-list>
-<!-- No tasks created or all tasks deleted -->
-<ng-template #empty>
-    <tm-no-tasks></tm-no-tasks>    
-</ng-template>
+
+<div *ngIf="tasks$; else loading">
+    <ng-container *ngIf="tasks$.length; else noTasks">
+        <tm-task-list [tasks]="tasks$"></tm-task-list>
+    </ng-container>
+    <ng-template #noTasks>
+        <tm-no-tasks></tm-no-tasks>
+    </ng-template>
+</div>
+<ng-template #loading>loading animation...</ng-template>

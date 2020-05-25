@@ -3,18 +3,29 @@
 @mixin border-radius {
   border-radius: 20px;
 }
- 
-input {
-  height: 30px;
+
+@mixin input {
   @include border-radius();
   background: #f1eded;
   padding: 0 10px 0 10px;
   border: none;
     &:focus {
-    box-shadow: 0 0 5px rgb(25, 231, 25) !important;
-    outline: none;
-    transition: 400ms ease-in;
-    }
+      box-shadow: 0 0 5px rgb(25, 231, 25) !important;
+      outline: none;
+      transition: 400ms ease-in;
+      }
+}
+
+input, select {
+  @include input();  
+  height: 30px;    
+}
+
+textarea {
+  @include input();  
+  height: 80px;
+  overflow-y: scroll;
+  resize: none;
 }
 
 button {
@@ -29,5 +40,8 @@ button {
     &:hover:not([disabled]) {
       transition: 400ms ease-in;
       background: $hover-background;
+    }
+    &:focus {
+      outline: none;
     }
 }

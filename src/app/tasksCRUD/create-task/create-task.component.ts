@@ -11,13 +11,16 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./create-task.component.scss']
 })
 export class CreateTaskComponent implements OnInit {
-
+  categories = ['Sports', 'Banking', 'Holidays', 'Children', 'Animals', 'Car', 'Private'];
+  reminders = ['10 minutes', '30 minutes', '1 hour', '2 hours', '3 hours', '5 hours', '8 hours', '1 day', '2 days', '3 days', '1 week'];
+  frequencies = ['Daily', 'Weekly', 'Monthly', 'Yearly'];
   tasksForm: FormGroup;
   taskNameControl: FormControl;
   taskCategoryControl: FormControl;
   taskDescriptionControl: FormControl;
   taskReminderControl: FormControl;
   taskFrequencyControl: FormControl;
+  taskDateControl: FormControl;
 
   constructor(
     private fb: FormBuilder,
@@ -32,12 +35,16 @@ export class CreateTaskComponent implements OnInit {
     this.taskDescriptionControl = this.fb.control('', Validators.required);
     this.taskFrequencyControl = this.fb.control('', Validators.required);
     this.taskNameControl = this.fb.control('', Validators.required);
+    this.taskDateControl = this.fb.control('', Validators.required);
+    this.taskReminderControl = this.fb.control('', Validators.required);
+
     this.tasksForm = this.fb.group({
       name: this.taskNameControl,
       category: this.taskCategoryControl,
       description: this.taskDescriptionControl,
       reminder: this.taskReminderControl,
       frequency: this.taskFrequencyControl,
+      date: this.taskDateControl,
     });
   }
 
