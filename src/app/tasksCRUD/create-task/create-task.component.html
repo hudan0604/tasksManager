@@ -1,22 +1,24 @@
-<form (ngSubmit)="addTask(tasksForm.value)" [formGroup]="tasksForm">
-    <div>
-        <label>Task name</label><input type='text' formControlName="name">
+<h2 class="create-task-title col-6">Add a task !</h2>
+<form [formGroup]="tasksForm" style="width: 50%;
+margin: auto;">
+    <div class="formDiv">
+        <label class="col-2">Task name</label><input class="col-8" type='text' formControlName="name">
     </div>
-    <div>
-        <label>Category</label><input type='text' formControlName="category">
+    <div class="formDiv">
+        <label class="col-2">Category</label><input class="col-8" type='text' formControlName="category">
     </div>
-    <div>
-        <label>Description</label><input type='text' formControlName="description">
+    <div class="formDiv">
+        <label class="col-2">Description</label><input class="col-8" type='text' formControlName="description">
     </div>
-    <div>
-        <label>Reminder</label><input type="text" formControlName="reminder">
+    <div class="formDiv">
+        <label class="col-2">Reminder</label><input class="col-8" type="text" formControlName="reminder">
     </div>
-    <div>
-        <label>Frequency</label><input type="text" formControlName="frequency">
+    <div class="formDiv">
+        <label class="col-2">Frequency</label><input class="col-8" type="text" formControlName="frequency">
     </div>
-    <div class="buttons_list">
-        <button type="submit" [disabled]='tasksForm.invalid'>Create</button>
+    <div class="buttons_list formDiv">
+        <button (click)="addTask(tasksForm.value)" [disabled]='tasksForm.invalid'>Create</button>
         <button (click)="resetForm()">Reset</button>
-        <button>Cancel</button> 
+        <button routerLink="/home">Cancel</button> 
     </div>       
 </form>

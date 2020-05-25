@@ -1,2 +1,15 @@
 @import '../../core/scss-partials/variables'; 
 @import '../../core/scss-partials/forms';
+@import '../../core/scss-partials/core-classes';
+
+.formDiv {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.create-task-title {    
+    text-align: center;
+    margin: 0 auto 25px;
+}

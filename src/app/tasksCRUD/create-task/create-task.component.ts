@@ -51,11 +51,15 @@ export class CreateTaskComponent implements OnInit {
 
   addTask(task: TaskModel): Promise<void | DocumentReference> {
     return this.taskService.addTask(task).then(
-      success => {
-        console.log('so? : ', success);
-        this.router.navigate(['../'], {relativeTo: this.route});
+      () => {
+        this.goHome();
       },
+      // Todo: create toast service to show error
       error => console.log('error: ', error));
+  }
+
+  goHome() {
+    this.router.navigate(['../'], {relativeTo: this.route});
   }
 
   ngOnInit() {

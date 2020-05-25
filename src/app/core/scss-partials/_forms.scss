@@ -1,4 +1,33 @@
-input:focus {
-    box-shadow: 0px 0px 3px $green-main-color;
-  }
-  
+@import '../../core/scss-partials/variables';
+
+@mixin border-radius {
+  border-radius: 20px;
+}
+ 
+input {
+  height: 30px;
+  @include border-radius();
+  background: #f1eded;
+  padding: 0 10px 0 10px;
+  border: none;
+    &:focus {
+    box-shadow: 0 0 5px rgb(25, 231, 25) !important;
+    outline: none;
+    transition: 400ms ease-in;
+    }
+}
+
+button {
+  height: 30px;
+  background: #99f099;
+  text-align: center;
+  @include border-radius();
+  margin-right: 20px;
+  width: 95px;
+  border: none;
+  cursor: pointer; 
+    &:hover:not([disabled]) {
+      transition: 400ms ease-in;
+      background: $hover-background;
+    }
+}
