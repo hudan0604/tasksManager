@@ -1,13 +1,16 @@
 <!-- At least one task -->
-
 <div *ngIf="tasks$; else loading">
     <ng-container *ngIf="tasks$.length; else noTasks">
         <tm-task-list [tasks]="tasks$"></tm-task-list>
     </ng-container>
+    <!-- No tasks yet -->
     <ng-template #noTasks>
         <tm-no-tasks></tm-no-tasks>
     </ng-template>
 </div>
+<!-- Tasks loading -->
 <ng-template #loading>
-    <div style="width: 50%; margin: 15% auto 0; text-align: center;">loading animation...</div>
+    <div style="width: 50%; margin: 15% auto 0; text-align: center;">
+        <tm-loading></tm-loading>
+    </div>
 </ng-template>

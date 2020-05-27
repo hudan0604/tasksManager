@@ -19,6 +19,7 @@ import { CreateTaskComponent } from './tasksCRUD/create-task/create-task.compone
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import { ModalComponent } from './ui-components/modal/modal.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { LoadingComponent } from './loading/loading/loading.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     TaskListComponent,
     ButtonComponent,
     CreateTaskComponent,
-    ModalComponent
+    ModalComponent,
+    LoadingComponent
   ],
   entryComponents: [
   ],
