@@ -1,0 +1,16 @@
+
+   <div *ngIf='config' style="width: 25%; text-align: center; margin: auto;">    
+        <div *ngIf="config.action === 'open'" style="position: absolute;
+        margin: -2% auto 0;">
+            <div [ngSwitch]="config.status">
+                <div *ngSwitchCase="'success'">
+                    <span><label class="toast-label">{{config.content}}</label><fa-icon [icon]="faClipboardCheck" class="toast-icon-success"></fa-icon></span>
+                </div>
+                <div *ngSwitchCase="'error'">
+                    <span><label class="toast-label">{{config.content}}</label><fa-icon [icon]="faExclamationTriangle" class="toast-icon-error"></fa-icon></span>
+                </div>
+
+            </div>             
+        </div>        
+    </div>
+   

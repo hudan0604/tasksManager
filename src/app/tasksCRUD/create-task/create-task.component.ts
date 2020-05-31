@@ -4,6 +4,7 @@ import { TaskModel } from 'src/app/core/models/models';
 import { FirebaseService } from 'src/app/core/services/firebase/firebase.service';
 import { DocumentReference } from '@angular/fire/firestore/interfaces';
 import { Router, ActivatedRoute } from '@angular/router';
+import { ToastService } from 'src/app/core/services/toast/toast.service';
 
 @Component({
   selector: 'tm-create-task',
@@ -27,6 +28,7 @@ export class CreateTaskComponent implements OnInit {
     private taskService: FirebaseService,
     private router: Router,
     private route: ActivatedRoute,
+    private toastService: ToastService,
     ) { }
 
   initForm() {
@@ -60,6 +62,7 @@ export class CreateTaskComponent implements OnInit {
     return this.taskService.addTask(task).then(
       () => {
         this.goHome();
+        this.toastService.openToast('success', 'Your task has been created !');
       },
       // Todo: create toast service to show error
       error => console.log('error: ', error));

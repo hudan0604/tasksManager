@@ -13,14 +13,13 @@ import { NoTasksComponent } from './noTasks/no-tasks/no-tasks.component';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { TaskComponent } from './tasks/task/task.component';
 import { TaskListComponent } from './tasks/task-list/task-list.component';
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { ButtonComponent } from './ui-components/button/button.component';
 import { CreateTaskComponent } from './tasksCRUD/create-task/create-task.component';
-import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import { ModalComponent } from './ui-components/modal/modal.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LoadingComponent } from './loading/loading/loading.component';
-
+import { ToastComponent } from './toast/toast/toast.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -33,7 +32,8 @@ import { LoadingComponent } from './loading/loading/loading.component';
     ButtonComponent,
     CreateTaskComponent,
     ModalComponent,
-    LoadingComponent
+    LoadingComponent,
+    ToastComponent
   ],
   entryComponents: [
   ],
@@ -43,10 +43,9 @@ import { LoadingComponent } from './loading/loading/loading.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    PerfectScrollbarModule,
-    DynamicDialogModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]

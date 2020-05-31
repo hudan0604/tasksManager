@@ -6,3 +6,9 @@ export interface TaskModel {
     reminder: Date;
     frequency: 'Daily' | 'Weekly' | 'Monthly' | 'Each year';
 }
+
+export interface ToastModel {
+    action: 'open' | 'close';
+    status?: 'success' | 'error';
+    content?: string;
+}
