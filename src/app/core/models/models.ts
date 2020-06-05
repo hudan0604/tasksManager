@@ -3,7 +3,8 @@ export interface TaskModel {
     name: string;
     category: string;
     description: string;
-    reminder: Date;
+    date: Date;
+    reminder: string;
     frequency: 'Daily' | 'Weekly' | 'Monthly' | 'Each year';
 }
 

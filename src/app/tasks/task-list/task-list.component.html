@@ -1,9 +1,14 @@
 <div style="display: flex;">
     <!-- List of tasks -->
     <div class="col-10">
-        <!-- Each task -->
-        <tm-task [task]="task" *ngFor="let task of tasks">            
-        </tm-task >        
+        <ng-container *ngFor="let year of tasksClassified">
+            <h3>{{year[0]}}</h3>
+            <p>{{getKeys(year[1])}}</p>
+            <!-- Each task -->
+            <!-- <tm-task [task]="task" *ngFor="let task of tasks">            
+            </tm-task > -->
+        </ng-container>
+                
     </div>
     <div class="col-2" routerLink="/createTask">
         bouton ajout        

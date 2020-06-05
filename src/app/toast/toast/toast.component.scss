@@ -1,7 +1,7 @@
 .toast-label {
     font-weight: 700; 
     font-size: 20px;
-    animation: 5s ease-out disappear;
+    animation: 5s disappear;
 }
 
 @keyframes disappear {
@@ -15,7 +15,7 @@
 
 @mixin icon($status) {
     font-size: 25px;
-    animation: 5s ease-out disappear;
+    animation: 5s disappear;
     margin-left: 10px;
     @if $status == 'success' {
         color: rgb(35, 214, 80);
