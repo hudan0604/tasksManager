@@ -22,6 +22,10 @@ export class TaskListComponent implements OnInit {
     return Object.keys(obj);
   }
 
+  getValues(obj: {}): any {
+    return Object.values(obj);
+  }
+
   /**
    *
    * @param tasks the list of tasks in database
@@ -37,6 +41,7 @@ export class TaskListComponent implements OnInit {
       // task month as string
       const taskMonth = this.monthsOfTheYear[taskMonthNumber];
       const taskYear = taskDate.getFullYear().toString();
+      
       // DIFERENT YEAR from other tasks :
       if (!this.tasksYears.includes(taskYear)) {
         this.tasksYears.push(taskYear);

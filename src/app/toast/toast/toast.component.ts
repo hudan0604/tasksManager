@@ -23,7 +23,6 @@ export class ToastComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.toastSub = this.toastService.toastConfig.subscribe((config: ToastModel) => {
     this.config = config;
-    console.log('status in toast cponent', config.status);
     });
   }
 

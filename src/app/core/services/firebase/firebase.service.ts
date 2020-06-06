@@ -10,9 +10,11 @@ export class FirebaseService {
   constructor(
     private db: AngularFirestore,
   ) { }
-  getTasks(): any {
-    return this.db.collection('tasks').snapshotChanges();
-  }
+  getTasks(orderedBy: string): any {
+    // return this.db.collection('tasks').orderBy('time', Query.Direction.ASCENDING).snapshotChanges();
+    return this.db.collection('tasks', ref =>
+ref.orderBy('date', 'asc')).snapshotChanges();
+}
   addTask(task: TaskModel) {
     return this.db.collection('tasks').add(task);
 }
